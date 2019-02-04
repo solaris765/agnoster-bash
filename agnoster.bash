@@ -388,6 +388,15 @@ prompt_emacsdir() {
     PR="DIR \w DIR$PR"
 }
 
+
+# NVM: output current node version if NVM present
+prompt_nvm() {
+  if [[ $(nvm_find_nvmrc) ]]; then
+    local v=$(nvm current | cut -d'.' -f 1)
+  fi
+  [[ $v != '' ]] && prompt_segment green black "⬢ $v"
+}
+
 ######################################################################
 ## Main prompt
 
@@ -398,6 +407,7 @@ build_prompt() {
     [[ -z ${AG_NO_CONTEXT+x} ]] && prompt_context
     prompt_virtualenv
     prompt_dir
+    prompt_nvm
     prompt_git
     prompt_end
 }
