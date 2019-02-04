@@ -7,6 +7,9 @@ A Powerline-inspired theme for BASH
 (Converted from ZSH theme by Kenny Root)
 https://gist.github.com/kruton/8345450
 
+# Solaris765 Added
+nvm support from https://gist.github.com/tnlin/df76dceb7ffe92ed1e1b0cf9be0f4226
+
 Updated & fixed by Hanish K H on oct-05-2017
 
 # UPDATE
@@ -34,7 +37,7 @@ I recommend the following:
 ```
 cd $HOME
 mkdir -p .bash/themes/agnoster-bash
-git clone https://github.com/speedenator/agnoster-bash.git .bash/themes/agnoster-bash
+git clone https://github.com/solaris765/agnoster-bash.git .bash/themes/agnoster-bash
 ```
 
 then add the following to your .bashrc:
